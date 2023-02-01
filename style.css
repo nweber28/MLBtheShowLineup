@@ -6,9 +6,24 @@ html {
 	display: grid;
 	background-color: #133253;
 	height: 555px;
+	gap: 20px;
 	grid-template-columns: 3fr 1fr;
 }
 
+.field {
+	
+}
+
+.player-cards {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	justify-items: center;
+}
+
+.player-cards > img {
+	height: 100%;
+}
 
 .lineup-bar {
 	background-color: #4B698B;
@@ -17,7 +32,3 @@ html {
 	gap: 20px;
 }
 
-.player-cards {
-	aspect-ratio: 1 / 1.4;
-	height: 200px;	
-}

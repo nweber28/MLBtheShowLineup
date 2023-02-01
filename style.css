@@ -1,0 +1,23 @@
+html {
+	background-color: #133253;
+}
+
+.container {
+	display: grid;
+	background-color: #133253;
+	height: 555px;
+	grid-template-columns: 3fr 1fr;
+}
+
+
+.lineup-bar {
+	background-color: #4B698B;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.player-cards {
+	aspect-ratio: 1 / 1.4;
+	height: 200px;	
+}

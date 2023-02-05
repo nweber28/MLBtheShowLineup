@@ -6,7 +6,7 @@ html {
 .container {
 	display: grid;
     background-color: rgb(19, 50, 83);
-    height: 555px;
+    height: 100%;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
 }
@@ -37,7 +37,16 @@ html {
 .lineup-bar {
 	background-color: rgb(75, 105, 139);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2rem;
+    color: #f2f7fc;
+}
+
+.lineup-bar > ol {
+    line-height: 2em;
 }
 

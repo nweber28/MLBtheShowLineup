@@ -1,9 +1,10 @@
 html {
 	background-color: #133253;
+    margin: 25px;
 }
 
 .container {
-	   display: grid;
+	display: grid;
     background-color: rgb(19, 50, 83);
     height: 555px;
     grid-template-columns: 3fr 1fr;
@@ -18,11 +19,19 @@ html {
 	display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .player-cards > img {
 	height: 100%;
+}
+
+.player-cards > img:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    transform: scale(1.1);
 }
 
 .lineup-bar {

@@ -1,6 +1,11 @@
 html {
-	background-color: #133253;
-    margin: 25px;
+	height: 100vh;
+    background-color: #133253;
+    margin: 5%;
+}
+
+body {
+    
 }
 
 .container {
@@ -9,6 +14,7 @@ html {
     height: 100%;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
+    width: 100%;
 }
 
 .field {
@@ -20,6 +26,8 @@ html {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     gap: 30px;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .player-cards > img {
@@ -37,16 +45,16 @@ html {
 .lineup-bar {
 	background-color: rgb(75, 105, 139);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-rows: 5% 1fr 5%;
     gap: 20px;
     width: 100%;
     font-family: 'Source Sans Pro', sans-serif;
     font-family: 'Work Sans', sans-serif;
     font-size: 2rem;
     color: #f2f7fc;
+/*    border-bottom: 5% solid #133253;*/
 }
 
 .lineup-bar > ol {
     line-height: 2em;
 }
-

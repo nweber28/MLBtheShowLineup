@@ -40,6 +40,7 @@ body {
     -o-box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     transform: scale(1.1);
+    transition: 250ms;
 }
 
 .lineup-bar {
@@ -57,4 +58,55 @@ body {
 
 .lineup-bar > ol {
     line-height: 2em;
+}
+
+
+/* lineup buttons */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#051E39, #133253 50%,#2A4C6F);
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 2em;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 1fr;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 15px 30px -5px;
+}
+
+.button-64 span {
+  background-color: #4D6C8C;
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
 }

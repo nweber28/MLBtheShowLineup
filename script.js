@@ -1,8 +1,26 @@
 var button = document.getElementsByClassName("text")[0];
+var btnCurrentSelected = false;
+var firstPlayer;
+var secondPlayer;
+
 
 function changeName() {
+	if (btnCurrentSelected) {
+		//set second player to second button clicked
+		if(firstPlayer === secondPlayer){
+			//if same button clicked twice
+			//reset button vars
+		} else {
+			//swap name content
+		}
+		btnCurrentSelected = false;
+	} else {
+		//set firstPlayer = to index of first selected
+
+		btnCurrentSelected = true;
+	}
 	console.log(button.innerText);
-	button.innerText = "Willie Stargell";
+	button.textContent = "Willie Stargell";
 }
 
 button.addEventListener("click", changeName);

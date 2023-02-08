@@ -1,7 +1,8 @@
 html {
 	height: 100vh;
-    background-color: #133253;
+/*    background-color: #133253; */
     margin: 5%;
+    background: linear-gradient(to right, #133253 , #2A4C6F, #133253);
 }
 
 body {
@@ -10,7 +11,7 @@ body {
 
 .container {
 	display: grid;
-    background-color: rgb(19, 50, 83);
+    background-color: rgba(19, 50, 83, 0.0);
     height: 100%;
     grid-template-columns: 3fr 1fr;
     gap: 20px;
@@ -22,7 +23,9 @@ body {
 }
 
 .player-cards {
-	display: grid;
+/*    background: linear-gradient(to right, #133253 , #2A4C6F, #133253);*/
+  	background-color: rgba(19, 50, 83, 0.0);
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     gap: 30px;
@@ -44,20 +47,27 @@ body {
 }
 
 .lineup-bar {
-	background-color: rgb(75, 105, 139);
     display: grid;
     grid-template-rows: 5% 1fr 5%;
-    gap: 20px;
+/*    gap: 20px;*/
     width: 100%;
     font-family: 'Source Sans Pro', sans-serif;
     font-family: 'Work Sans', sans-serif;
     font-size: 2rem;
     color: #f2f7fc;
-/*    border-bottom: 5% solid #133253;*/
 }
 
-.lineup-bar > ol {
+.player-names {
     line-height: 2em;
+    background-color: rgb(75, 105, 139);
+}
+
+.player-names > button {
+  width: 100%;
+}
+
+.lineup-border {
+  background: rgba(0, 0, 0, 0.0);
 }
 
 
@@ -66,7 +76,6 @@ body {
   align-items: center;
   background-image: linear-gradient(144deg,#051E39, #133253 50%,#2A4C6F);
   border: 0;
-  border-radius: 8px;
   box-sizing: border-box;
   color: #FFFFFF;
   display: flex;

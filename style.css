@@ -1,21 +1,66 @@
-html {
+html, body{
 	height: 100vh;
-/*    background-color: #133253; */
-    margin: 5%;
-    background: linear-gradient(to right, #133253 , #2A4C6F, #133253);
+  margin: auto 0;
+  background: linear-gradient(to right, #133253 , #2A4C6F, #133253);
+
 }
 
-body {
-    
+.screen-container {
+  display: grid;
+  height: 100vh; /*vh = view height*/
+  grid-template-rows: 50px auto;
 }
 
 .container {
 	display: grid;
-    background-color: rgba(19, 50, 83, 0.0);
-    height: 100%;
-    grid-template-columns: 3fr 1fr;
-    gap: 20px;
+  background-color: rgba(19, 50, 83, 0.0);
+  height: 100%;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  width: 100%;
+  padding-top: 5%;
+}
+
+/*NAV*/
+.zone {
+    cursor:pointer;
+    color:#FFF;
+    font-size:2em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
     width: 100%;
+}
+
+.blue{
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}
+
+.navBar {
+    display: flex;
+    list-style: none;   
+    margin: auto 0;
+    align-items: center;
+}
+
+.navLeft {
+    padding: 20px;
+}
+
+.navRight {
+    margin-left: auto;
+    padding: 25px;
 }
 
 .field {
@@ -23,7 +68,6 @@ body {
 }
 
 .player-cards {
-/*    background: linear-gradient(to right, #133253 , #2A4C6F, #133253);*/
   	background-color: rgba(19, 50, 83, 0.0);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -44,12 +88,12 @@ body {
     box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     transform: scale(1.1);
     transition: 250ms;
+    cursor:pointer;
 }
 
 .lineup-bar {
     display: grid;
     grid-template-rows: 5% 1fr 5%;
-/*    gap: 20px;*/
     width: 100%;
     font-family: 'Source Sans Pro', sans-serif;
     font-family: 'Work Sans', sans-serif;
@@ -58,12 +102,15 @@ body {
 }
 
 .player-names {
+    display: grid;
+    grid-template-rows: auto;
     line-height: 2em;
     background-color: rgb(75, 105, 139);
 }
 
 .player-names > button {
   width: 100%;
+
 }
 
 .lineup-border {

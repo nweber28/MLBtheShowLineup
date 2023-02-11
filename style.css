@@ -15,8 +15,8 @@ html, body{
 	display: grid;
   background-color: rgba(19, 50, 83, 0.0);
   height: 100%;
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
+  grid-template-columns: 4fr minmax(200px, 1fr);
+  gap: 40px;
   width: 100%;
   padding-top: 5%;
 }
@@ -26,9 +26,8 @@ html, body{
     cursor:pointer;
     color:#FFF;
     font-size:2em;
-    border-radius:4px;
-    border:1px solid #bbb;
     transition: all 0.3s linear;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .sticky {
@@ -37,15 +36,15 @@ html, body{
     width: 100%;
 }
 
-.blue{
-    background: #7abcff; /* Old browsers */
-    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
-    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
-}
+/*.blue{*/
+/*    background: #7abcff; /* Old browsers */
+/*    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+/*    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+/*    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+/*    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+/*    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+/*    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+/*}*/
 
 .navBar {
     display: flex;
@@ -72,23 +71,33 @@ html, body{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
-    gap: 30px;
+    row-gap: 100px;
+    column-gap: 20px;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.player-cards > img {
+.position-name > img {
 	height: 100%;
 }
 
-.player-cards > img:hover {
+.position-name > img:hover {
     -webkit-box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -moz-box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -o-box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 10px 20px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 250ms;
     cursor:pointer;
+}
+
+.position-name {
+/*  display: grid;*/
+/*  gap: 5px;*/
+}
+
+.position-name > h2 {
+  color: #BEC0C3;
 }
 
 .lineup-bar {
@@ -106,6 +115,8 @@ html, body{
     grid-template-rows: auto;
     line-height: 2em;
     background-color: rgb(75, 105, 139);
+    text-align: center;
+    text-justify: center;
 }
 
 .player-names > button {
@@ -149,7 +160,6 @@ html, body{
 
 .button-64 span {
   background-color: #4D6C8C;
-  padding: 16px 24px;
   border-radius: 6px;
   width: 100%;
   height: 100%;

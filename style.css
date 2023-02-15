@@ -11,73 +11,25 @@ html, body{
 }
 
 .container {
-    display: grid;
+  display: grid;
   background-color: rgba(19, 50, 83, 0.0);
   height: 100%;
-  grid-template-columns: 4fr minmax(200px, 1fr);
   gap: 40px;
   width: 100%;
   padding-top: 5%;
 }
 
-/*NAV*/
-.zone {
-    cursor:pointer;
-    color:#FFF;
-    font-size:2em;
-    transition: all 0.3s linear;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-/*.blue{*/
-/*    background: #7abcff; /* Old browsers */
-/*    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
-/*    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
-/*    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
-/*    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
-/*    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
-/*    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
-/*}*/
-
-.navBar {
-    display: flex;
-    list-style: none;   
-    margin: auto 0;
-    align-items: center;
-}
-
-.navLeft {
-    padding: 20px;
-}
-
-.navRight {
-    margin-left: auto;
-    padding: 25px;
-}
-
-.field {
-	
-}
-
 .player-cards {
-  	background-color: rgba(19, 50, 83, 0.0);
+    background-color: rgba(19, 50, 83, 0.0);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-items: center;
     row-gap: 100px;
     column-gap: 20px;
-    padding-top: 5%;
-    padding-bottom: 5%;
 }
 
 .position-name > img {
-	height: 100%;
+    height: 100%;
 }
 
 .position-name > img:hover {
@@ -116,6 +68,64 @@ html, body{
 .lineup-border {
   background: rgba(0, 0, 0, 0.0);
 }
+
+/*media queries*/
+@media screen 
+  and (max-width: 1225px)  { 
+    .container {
+        grid-template-rows: 1fr, 2fr;
+        padding-top: 10%;
+    }
+    .lineup-bar {
+        order: -1;
+        grid-template-rows: 2% 1fr 1%;
+    }
+}
+
+@media screen 
+  and (min-width: 1226px)  { 
+    .container {
+        grid-template-columns: 4fr minmax(200px, 1fr);
+        padding-top: 10%;
+    }
+}
+
+/*NAV*/
+.zone {
+    cursor:pointer;
+    color:#FFF;
+    font-size:2em;
+    transition: all 0.3s linear;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navBar {
+    display: flex;
+    list-style: none;   
+    margin: auto 0;
+    align-items: center;
+}
+
+.navLeft {
+    padding: 20px;
+}
+
+.navRight {
+    margin-left: auto;
+    padding: 25px;
+}
+
+.field {
+	
+}
+
+
 
 
 /* lineup buttons */

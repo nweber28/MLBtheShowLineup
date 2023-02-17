@@ -16,12 +16,12 @@ let nameArr = [{name: "Jason Kendall", img: "images/kendall.png"},
 			  ];
 
 //initialize cards and names into lineup
-let names = document.getElementsByClassName("player-image");
+let images = document.getElementsByClassName("player-image");
 let nodes = document.getElementsByClassName('text');
 
 function updateImageOrder() {
-	for (let i = 0; i < names.length; i++) {
-		names[i].setAttribute("src", nameArr[i].img);
+	for (let i = 0; i < images.length; i++) {
+		images[i].setAttribute("src", nameArr[i].img);
 	}
 }
 

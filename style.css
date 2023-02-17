@@ -15,14 +15,16 @@ html, body{
   background-color: rgba(19, 50, 83, 0.0);
   height: 100%;
   gap: 40px;
-  width: 100%;
+  width: auto;
   padding-top: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .player-cards {
     background-color: rgba(19, 50, 83, 0.0);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
     column-gap: 20px;
 }

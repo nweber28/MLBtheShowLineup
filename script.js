@@ -14,6 +14,7 @@ for (var i = 0; i < nodes.length; i++) {
 	if (btnCurrentSelected) {
 		//set second player to second button clicked
 		secondPlayer = nodes[i].textContent;
+		nodes[i].classList.add("clicked");
 		secondIndex = i;
 		if(firstPlayer === secondPlayer){
 			//if same button clicked twice
@@ -23,11 +24,14 @@ for (var i = 0; i < nodes.length; i++) {
 			//swap name content
 			nodes[firstIndex].textContent = secondPlayer;
 			nodes[secondIndex].textContent = firstPlayer;
+			nodes[firstIndex].classList.remove("clicked");
+			nodes[secondIndex].classList.remove("clicked");
 		}
 		btnCurrentSelected = false;
 	} else {
 		//set firstPlayer = to index of first selected
 		firstPlayer = nodes[i].textContent;
+		nodes[i].classList.add("clicked");
 		firstIndex = i;
 		btnCurrentSelected = true;
 	}

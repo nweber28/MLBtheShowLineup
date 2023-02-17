@@ -172,6 +172,11 @@ html, body{
   background: none;
 }
 
+.clicked {
+    border: 3px solid white;
+    border-radius: 6px;
+}
+
 @media (min-width: 768px) {
   .button-64 {
     font-size: 24px;
@@ -180,3 +185,5 @@ html, body{
     text-align: center;
   }
 }
+
+

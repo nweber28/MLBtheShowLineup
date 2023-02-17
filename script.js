@@ -35,6 +35,9 @@ function updateNameOrder(){
 updateImageOrder();
 updateNameOrder();
 
+//add/remove click styling
+let addOutline = (docObj, index) => docObj[index].classList.add("clicked");
+let  removeOutline = (docObj, index) => docObj[index].classList.remove("clicked");
 
 for (let i = 0; i < nodes.length; i++) {
    nodes[i].addEventListener('click', function(i) {
@@ -42,18 +45,17 @@ for (let i = 0; i < nodes.length; i++) {
 	if (btnCurrentSelected) {
 		//set second player to second button clicked
 		secondPlayer = nodes[i].textContent;
-		nodes[i].classList.add("clicked");
+		addOutline(nodes, i);
 		secondIndex = i;
-		if(firstPlayer === secondPlayer){
-			//if same button clicked twice
-			//reset button lets
-			nodes[firstIndex].classList.remove("clicked");
-		} else {
-			//swap name content
+
+		if(firstPlayer === secondPlayer){ //if same button clicked twice
+			removeOutline(nodes, firstIndex);
+
+		} else { //swap name content
 			nodes[firstIndex].textContent = secondPlayer;
 			nodes[secondIndex].textContent = firstPlayer;
-			nodes[firstIndex].classList.remove("clicked");
-			nodes[secondIndex].classList.remove("clicked");
+			removeOutline(nodes, firstIndex);
+		    removeOutline(nodes, secondIndex);
 
 			//swap images, swap names in db array
 			let temp = nameArr[firstIndex].img;
@@ -63,13 +65,12 @@ for (let i = 0; i < nodes.length; i++) {
 
 			nameArr[firstIndex].name = secondPlayer;
 			nameArr[secondIndex].name = firstPlayer;
-
 		}
 		btnCurrentSelected = false;
+
 	} else {
-		//set firstPlayer = to index of first selected
 		firstPlayer = nodes[i].textContent;
-		nodes[i].classList.add("clicked");
+		addOutline(nodes, i);
 		firstIndex = i;
 		btnCurrentSelected = true;
 	}

@@ -36,8 +36,8 @@ updateImageOrder();
 updateNameOrder();
 
 //add/remove click styling
-let addOutline = (docObj, index) => docObj[index].classList.add("clicked");
-let removeOutline = (docObj, index) => docObj[index].classList.remove("clicked");
+let addOutline = (docObj, index, className) => docObj[index].classList.add(className);
+let removeOutline = (docObj, index, className) => docObj[index].classList.remove(className);
 
 for (let i = 0; i < nodes.length; i++) {
    nodes[i].addEventListener('click', function(i) {
@@ -45,21 +45,21 @@ for (let i = 0; i < nodes.length; i++) {
 	if (btnCurrentSelected) {
 		//set second player to second button clicked
 		secondPlayer = nodes[i].textContent;
-		addOutline(nodes, i);
-		addOutline(images, i);
+		addOutline(nodes, i, "clicked");
+		addOutline(images, i, "clicked-shadow");
 		secondIndex = i;
 
 		if(firstPlayer === secondPlayer){ //if same button clicked twice
-			removeOutline(nodes, firstIndex);
-			removeOutline(images, firstIndex);
+			removeOutline(nodes, firstIndex, "clicked");
+			removeOutline(images, firstIndex, "clicked-shadow");
 
 		} else { //swap name content
 			nodes[firstIndex].textContent = secondPlayer;
 			nodes[secondIndex].textContent = firstPlayer;
-			removeOutline(nodes, firstIndex);
-		   removeOutline(nodes, secondIndex);
-		   removeOutline(images, firstIndex);
-		   removeOutline(images, secondIndex);
+			removeOutline(nodes, firstIndex, "clicked");
+		   removeOutline(nodes, secondIndex, "clicked");
+		   removeOutline(images, firstIndex, "clicked-shadow");
+		   removeOutline(images, secondIndex, "clicked-shadow");
 
 			//swap images, swap names in db array
 			let temp = nameArr[firstIndex].img;
@@ -74,8 +74,8 @@ for (let i = 0; i < nodes.length; i++) {
 
 	} else {
 		firstPlayer = nodes[i].textContent;
-		addOutline(nodes, i);
-		addOutline(images, i);
+		addOutline(nodes, i, "clicked");
+		addOutline(images, i, "clicked-shadow");
 		firstIndex = i;
 		btnCurrentSelected = true;
 	}

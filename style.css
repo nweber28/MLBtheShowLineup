@@ -127,6 +127,11 @@ html, body{
     color: white;
 }
 
+.navBar > li > a:hover {
+    color: #4D6C8C;
+}
+
+
 .menuLink:link {
     color: white;
 }

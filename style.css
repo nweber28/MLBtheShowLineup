@@ -122,6 +122,18 @@ html, body{
     padding: 25px;
 }
 
+.navBar > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.menuLink:link {
+    color: white;
+}
+
+.menuLink:visited {
+    color: white;
+}
 
 /* lineup buttons */
 .button-64 {
